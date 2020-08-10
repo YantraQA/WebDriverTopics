@@ -9,9 +9,7 @@ public class _1_ChromeInvocation {
 		
 		
 		// Set the path of browser driver
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sarang\\eclipse-workspace\\WebDriverTopics\\chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
 		
 		
 		// Topcasting/Upcasting - Object of chromedriver class with webdriver interface
