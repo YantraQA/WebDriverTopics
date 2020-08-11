@@ -34,7 +34,7 @@ public class _10_CloseVsQuit {
 		//driver.close();
 		
 		// Closing the all browser instances opened
-		/driver.quit();
+		//driver.quit();
 
 	}
 
