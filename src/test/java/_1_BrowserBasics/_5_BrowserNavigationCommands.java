@@ -44,7 +44,7 @@ public class _5_BrowserNavigationCommands {
 				
 		Thread.sleep(2000);
 
-		// Closing the broswer
+		// Closing the browser
 		driver.quit();
 
 	}
