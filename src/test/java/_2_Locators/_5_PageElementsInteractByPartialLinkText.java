@@ -22,9 +22,12 @@ public class _5_PageElementsInteractByPartialLinkText {
 		driver.get("https://dzone.com/articles/find-elements-with-link-text-amp-partial-link-text");
 
 		// Finding the WebElement of Link for text "Name locator in Selenium"
-		WebElement secondLink = driver.findElement(By.partialLinkText("Name locator"));
-
-		// Entering Text into User Name field
+		WebElement secondLink = driver.findElement(By.partialLinkText("Name locator")); // Although full link text is : "Name locator in Selenium"
+		
+		// To slow the execution 
+		Thread.sleep(3000);
+		
+		// Clicking on Second Link
 		secondLink.click();
 
 		// Waiting for next page to load 

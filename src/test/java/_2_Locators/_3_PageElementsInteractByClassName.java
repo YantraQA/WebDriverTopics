@@ -1,5 +1,7 @@
 package _2_Locators;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,10 +19,13 @@ public class _3_PageElementsInteractByClassName {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception
 
 		// Invoking the browser with given URL
 		driver.get("http://zero.webappsecurity.com/");
+		
+		// Fetching the title of current page
+		System.out.println("The page title before clicking on Sign In Button is : " + driver.getTitle());
 
 		// Finding the WebElement for SignIn button
 		WebElement signInButton = driver.findElement(By.className("signin"));
@@ -31,6 +36,7 @@ public class _3_PageElementsInteractByClassName {
 		// Waiting for login page to load
 		Thread.sleep(4000);
 		
+		// Fetching the title of the updated page
 		System.out.println("The page title after clicking on Sign In Button is : " + driver.getTitle());
 
 		// Closing The browser

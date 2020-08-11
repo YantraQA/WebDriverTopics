@@ -9,10 +9,12 @@ public class _1_ChromeInvocation {
 		
 		
 		// Set the path of browser driver
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sarang\\eclipse-workspace\\WebDriverTopics\\chromedriver.exe"); // if driver is in other location
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe"); // if driver file is in root folder of project
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
+		//No need to right this line if driver is in root folder
 		
-		
-		// Topcasting/Upcasting - Object of chromedriver class with webdriver interface
+		// Topcasting/Upcasting - Object of ChromeDriver class with WebDriver interface
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize(); // maximize browser window 
@@ -28,7 +30,6 @@ public class _1_ChromeInvocation {
 		// fetching page url after the page is opened in browser
 		String pageUrl = driver.getCurrentUrl();
 		System.out.println("Current Page Url is : "+ pageUrl);
-		
 		
 		//System.out.println("Current Page Source is : "+ driver.getPageSource());
 

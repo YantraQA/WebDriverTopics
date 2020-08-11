@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class _4_PageElementsInteractByLinkText {
+public class _10_CloseVsQuit {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -30,8 +30,11 @@ public class _4_PageElementsInteractByLinkText {
 		// Waiting for next page to load 
 		Thread.sleep(5000);
 
-		// Closing the browser
-		driver.quit();
+		// Closing the current browser instance
+		//driver.close();
+		
+		// Closing the all browser instances opened
+		/driver.quit();
 
 	}
 

@@ -37,7 +37,7 @@ public class _6_PageElementsInteractByCssSelector {
 		searchButton.click();
 		
 		// Waiting for next page to load 
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		// Fetching the page title & printing it
 		System.out.println("The Page Title is : " + driver.getTitle());

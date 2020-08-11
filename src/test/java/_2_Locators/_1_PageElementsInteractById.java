@@ -1,5 +1,7 @@
 package _2_Locators;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,7 @@ public class _1_PageElementsInteractById {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
 
 		// Invoking the browser with given URL
 		driver.get("http://demo.automationtesting.in/Index.html");

@@ -1,5 +1,7 @@
 package _2_Locators;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,20 +19,22 @@ public class _7_PageElementsInteractByXpath {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// Invoking the browser with given URL
 		driver.get("http://demo.automationtesting.in/Register.html");
 
-		// Finding the WebElement of First Name field by using xpath
+		// Finding the WebElement of First Name textbox field by using xpath
 		WebElement firstNameTextBox = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
 
 		// Entering text into the search box
 		firstNameTextBox.sendKeys("Tom");
 
-		// Fetching the page title & printing it
-		System.out.println("The Page Title is : " + driver.getTitle());
-
+		// Finding the WebElement of Gender male radio buttton by using xpath
+		WebElement genderMaleButton = driver.findElement(By.xpath("//input[@value='Male']"));
+		genderMaleButton.click();
+		
+		
 	}
 
 }

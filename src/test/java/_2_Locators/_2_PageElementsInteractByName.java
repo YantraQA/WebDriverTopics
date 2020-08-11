@@ -21,12 +21,12 @@ public class _2_PageElementsInteractByName {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
 
 		// Invoking the browser with given URL
 		driver.get("http://www.google.co.in");
 		
-		// Finding the WebElement of SearchBox
+		// Finding the WebElement of SearchBox by name locator
 		WebElement searchBox = driver.findElement(By.name("q"));
 		
 		// Entering text into the search box
@@ -35,14 +35,14 @@ public class _2_PageElementsInteractByName {
 		// Waiting for the Google Search button to appear after entering the search keyword
 		Thread.sleep(4000);
 		
-		// Finding the WebElement of Google Search button
+		// Finding the WebElement of Google Search button by name locator
 		WebElement searchButton = driver.findElement(By.name("btnK"));
 		
 		// Clicking on Google Search button
 		searchButton.click();
 		
 		// Waiting for next page to load 
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		// Fetching the page title & printing it
 		System.out.println("The Page Title is : " + driver.getTitle());
