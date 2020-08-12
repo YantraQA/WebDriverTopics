@@ -30,8 +30,8 @@ public class _10_CloseVsQuit {
 		// Waiting for next page to load 
 		Thread.sleep(5000);
 
-		// Closing the current browser instance
-		//driver.close();
+		// Closing the current browser instance where WebDriver is pointing
+		driver.close();
 		
 		// Closing the all browser instances opened
 		//driver.quit();

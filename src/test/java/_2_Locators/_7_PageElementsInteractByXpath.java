@@ -34,6 +34,12 @@ public class _7_PageElementsInteractByXpath {
 		WebElement genderMaleButton = driver.findElement(By.xpath("//input[@value='Male']"));
 		genderMaleButton.click();
 		
+		// So see the execution before closing the browser
+		Thread.sleep(4000);
+		
+		// Closing the browser
+		driver.quit();
+		
 		
 	}
 

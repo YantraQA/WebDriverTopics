@@ -23,9 +23,10 @@ public class _1_ChromeInvocation {
 		// entering url to open
 		driver.get("https://demo.cs-cart.com/");
 		
+		
 		// fetching page title
 		String pageTitle = driver.getTitle();
-		System.out.println("Current Page titke is : " + pageTitle);
+		System.out.println("Current Page title is : " + pageTitle);
 		
 		// fetching page url after the page is opened in browser
 		String pageUrl = driver.getCurrentUrl();

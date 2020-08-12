@@ -40,7 +40,7 @@ public class _6_PageElementsInteractByCssSelector {
 		Thread.sleep(5000);
 		
 		// Fetching the page title & printing it
-		System.out.println("The Page Title is : " + driver.getTitle());
+		System.out.println("The Page Title is after making search for a keyword is : " + driver.getTitle());
 
 		// Closing the browser
 		driver.quit();

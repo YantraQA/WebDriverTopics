@@ -19,7 +19,7 @@ public class _5_BrowserNavigationCommands {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
 
 		// Invoking the browser with given URL
 		driver.get("https://www.google.co.in");
@@ -36,6 +36,7 @@ public class _5_BrowserNavigationCommands {
 		// Navigating to the back page
 		driver.navigate().back();
 		System.out.println("Page title is : " + driver.getTitle());
+		
 		
 		Thread.sleep(2000);
 		

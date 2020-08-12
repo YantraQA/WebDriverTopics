@@ -19,7 +19,7 @@ public class _1_PageElementsInteractById {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
 
 		// Invoking the browser with given URL
 		driver.get("http://demo.automationtesting.in/Index.html");

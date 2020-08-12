@@ -21,7 +21,7 @@ public class _2_PageElementsInteractByName {
 
 		driver.manage().window().maximize(); // maximize browser window 
 		driver.manage().deleteAllCookies(); // delete all cookies
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); // set a maximum timeout for searching out the WebElements before throwing an exception 
 
 		// Invoking the browser with given URL
 		driver.get("http://www.google.co.in");
