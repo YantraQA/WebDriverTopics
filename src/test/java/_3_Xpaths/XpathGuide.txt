@@ -1,0 +1,31 @@
+Notes - 
+
+1. Absolute Xpath starts always with "//" - means anywhere inside the document
+
+2. Xpath With Contains
+	When to use - First -> id = #hqf_test_123 after refresh -> id = #hqf_test_124
+	then xpath will be ->//input[contains(@id,'_test_')]
+	
+3. Xpath with Contains Text function
+	When to use - there is no id, name, classname attribute available & element having particular text
+	then xpath will be ->//input[contains(text(),'iphone')]
+	Note - it will also find the elements having some other text with word iphone in it
+	
+4. Xpath with Text 
+	When to use - element having particular text
+	then xpath will be ->//input[text()='iphone')]
+	Note - it will find specifically the element having iphone text available
+	
+5. Xpath with "starts-With"  
+	When to use - First ->  id = test_123 after refresh -> id = test_124
+	then xpath will be -> //input[starts-with(@id,'test_')]
+	
+
+6. Xpath with "ends-With"  
+	When to use - First ->  id = %456_test after refresh -> id = %457_test
+	then xpath will be -> //input[ends-with(@id,'_test')]
+
+7. Xpath with index
+	When to use - there are more than one elements pointing to a xpath having already unique properties
+	URL - https://getbootstrap.com/docs/4.0/components/buttons/
+	then xpath will be -> (//div[@class='bd-example']/button[@type='button' and text()='Primary'])[2]
