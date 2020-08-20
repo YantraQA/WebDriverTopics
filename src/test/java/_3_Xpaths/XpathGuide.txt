@@ -4,7 +4,7 @@ Notes -
 
 2. Xpath With Contains
 	When to use - First -> id = #hqf_test_123 after refresh -> id = #hqf_test_124
-	then xpath will be ->//input[contains(@id,'_test_')]
+	then xpath will be ->//input[contains(@id,'#hqf_test_')]
 	
 3. Xpath with Contains Text function
 	When to use - there is no id, name, classname attribute available & element having particular text

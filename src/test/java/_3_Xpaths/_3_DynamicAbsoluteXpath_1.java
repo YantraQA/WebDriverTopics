@@ -38,7 +38,9 @@ public class _3_DynamicAbsoluteXpath_1 {
 		Thread.sleep(3000);
 		
 		List <WebElement> searchList = driver.findElements(By.xpath("//ul[@class='desktop-group']//li[@class='desktop-suggestion null']"));
+		System.out.println("The search result count is : "+searchList.size());
 		for (int i = 0; i < searchList.size(); i++) {
+		
 			//System.out.println(searchList.get(i).getText());
 			if(searchList.get(i).getText().equals(TextToBeClicked))
 			{
@@ -47,7 +49,7 @@ public class _3_DynamicAbsoluteXpath_1 {
 		}
 		
 		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 	}
 

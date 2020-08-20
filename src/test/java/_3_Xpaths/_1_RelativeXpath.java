@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+
 public class _1_RelativeXpath {
 	
 	WebDriver driver;
@@ -29,25 +31,27 @@ public class _1_RelativeXpath {
 	
 	@Test
 	public void validateTitleTest()
-	{
+	{	
 		Assert.assertEquals("Title is not matching", pageTitle, driver.getTitle());
+		System.out.println("Test Case is pass");
+	
 	}
 	
-	@Test
-	public void searchboxItem() throws InterruptedException
-	{
-		WebElement searchBox = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[2]/div[1]/input"));
-		searchBox.sendKeys("iphone");
-		
-		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(3000);
-		
-		WebElement searchButton = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input"));
-		searchButton.click();
-		
-		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(3000);
-	}
+//	@Test
+//	public void searchboxItem() throws InterruptedException
+//	{
+//		WebElement searchBox = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[2]/div[1]/input"));
+//		searchBox.sendKeys("iphone");
+//		
+//		// To Halt the execution for sometime (demonstration purposes)
+//		Thread.sleep(3000);
+//		
+//		WebElement searchButton = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input"));
+//		searchButton.click();
+//		
+//		// To Halt the execution for sometime (demonstration purposes)
+//		Thread.sleep(3000);
+//	}
 	
 	@After
 	public void teardown()

@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class _3_DynamicAbsoluteXpath_2 {
 	
 	WebDriver driver;
-	String TextToBeClicked = "Pepe Jeans Jackets Men";
+	String TextToBeClicked = "Pepe Jeans Tshirts";
 
 	@Before
 	public void setup()
@@ -36,9 +36,9 @@ public class _3_DynamicAbsoluteXpath_2 {
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
 		
-		WebElement searchitem = driver.findElement(By.xpath("//ul[@class='desktop-group']//li[@class='desktop-suggestion null' and text()='"+TextToBeClicked+"']"));
+		WebElement searchItem = driver.findElement(By.xpath("//ul[@class='desktop-group']//li[@class='desktop-suggestion null' and text()='"+TextToBeClicked+"']"));
 		
-		searchitem.click();
+		searchItem.click();
 		
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
