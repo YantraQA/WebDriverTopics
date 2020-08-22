@@ -1,17 +1,18 @@
-package _4_DropDownAndMouseActions;
+package _5_AltertPopUpFrameHandling;
 
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
-public class _3_RightClick {
+public class _3_AlertHandling {
 
 	WebDriver driver;
 
@@ -22,20 +23,28 @@ public class _3_RightClick {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("http://demo.guru99.com/test/simple_context_menu.html");
+		driver.get("http://demo.automationtesting.in/Alerts.html");
 	}
 
 	@Test
 	public void dropDown() throws InterruptedException
 	{
-		WebElement righClickMeButton = driver.findElement(By.xpath("//span[text()='right click me']"));
+		WebElement alertTypeSelection = driver.findElement(By.xpath("//a[contains(text(),'Alert with Textbox')]"));
+		alertTypeSelection.click();
 
+		WebElement alertButton = driver.findElement(By.xpath("//button[contains(text(),'click the button to demonstrate the prompt box')]"));
+		alertButton.click();
+
+		Alert alert = driver.switchTo().alert();
 		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(3000);
+		Thread.sleep(2000);
+
+		alert.sendKeys("Top Peter");
+		alert.accept();
 		
-		Actions act = new Actions(driver);
-	
-		act.contextClick(righClickMeButton).build().perform();
+		WebElement alertConfirmationMsg = driver.findElement(By.xpath("//p[@id='demo1']"));
+		
+		Assert.assertEquals(true, alertConfirmationMsg.getText().contains("Top Peter"));
 	}
 
 	@After

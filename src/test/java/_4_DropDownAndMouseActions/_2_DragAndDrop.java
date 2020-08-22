@@ -29,6 +29,8 @@ public class _2_DragAndDrop {
 	public void dropDown() throws InterruptedException
 	{
 		
+//		WebElement frameEle = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
+//		driver.switchTo().frame(frameEle);
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
 		
 		

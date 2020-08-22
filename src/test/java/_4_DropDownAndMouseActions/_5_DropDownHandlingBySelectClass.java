@@ -43,7 +43,7 @@ public class _5_DropDownHandlingBySelectClass {
 		Thread.sleep(2000);
 		
 		Select monthSelect = new Select(birthMonth);
-		monthSelect.selectByVisibleText("Sep");
+		monthSelect.selectByVisibleText("Dec");
 		
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(2000);

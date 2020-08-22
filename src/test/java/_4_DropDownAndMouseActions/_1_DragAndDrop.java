@@ -28,10 +28,10 @@ public class _1_DragAndDrop {
 	@Test
 	public void dropDown() throws InterruptedException
 	{
-		//WebElement element1 = driver.findElement(By.id("draggable"));
-		WebElement element1 = driver.findElement(By.xpath("//div[@id='draggable']"));
-		//WebElement dropArea = driver.findElement(By.id("droppable"));
-		WebElement dropArea = driver.findElement(By.xpath("//div[@id='simpleDropContainer']//div[@id='droppable']"));
+		WebElement element1 = driver.findElement(By.id("draggable"));
+		//WebElement element1 = driver.findElement(By.xpath("//div[@id='draggable']"));
+		WebElement dropArea = driver.findElement(By.id("droppable"));
+		//WebElement dropArea = driver.findElement(By.xpath("//div[@id='simpleDropContainer']//div[@id='droppable']"));
 		Actions act = new Actions(driver);
 		
 		// To Halt the execution for sometime (demonstration purposes)

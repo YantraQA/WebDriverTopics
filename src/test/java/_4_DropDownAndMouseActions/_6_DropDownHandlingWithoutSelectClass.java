@@ -41,6 +41,10 @@ public class _6_DropDownHandlingWithoutSelectClass {
 		for (int i = 0; i < rightClickMenuOptions.size(); i++) {
 		
 			System.out.println("Option No " + (i+1) +" is "+ rightClickMenuOptions.get(i).getText());
+			if (rightClickMenuOptions.get(i).getText().equals("Copy")) {
+				
+				rightClickMenuOptions.get(i).click();
+			}
 			
 		}
 	}
