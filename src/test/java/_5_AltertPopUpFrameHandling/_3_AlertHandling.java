@@ -39,12 +39,12 @@ public class _3_AlertHandling {
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(2000);
 
-		alert.sendKeys("Top Peter");
+		alert.sendKeys("Tom Peter");
 		alert.accept();
 		
 		WebElement alertConfirmationMsg = driver.findElement(By.xpath("//p[@id='demo1']"));
 		
-		Assert.assertEquals(true, alertConfirmationMsg.getText().contains("Top Peter"));
+		Assert.assertEquals(true, alertConfirmationMsg.getText().contains("Tom Peter"));
 	}
 
 	@After

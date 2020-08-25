@@ -42,11 +42,11 @@ public class _5_FrameHandling {
 		// switching back to main window
 		
 		// either
-		//driver.switchTo().defaultContent();
+		driver.switchTo().defaultContent();
 		
 		// Or
-		driver.switchTo().parentFrame();
-		driver.switchTo().parentFrame();
+//		driver.switchTo().parentFrame(); // switch back to frame 1
+//		driver.switchTo().parentFrame(); // switch back from frame 1 to main window
 		
 		WebElement pageCenterText = driver.findElement(By.xpath("//h1[text()='Automation Demo Site ']"));
 		System.out.println(pageCenterText.getText());

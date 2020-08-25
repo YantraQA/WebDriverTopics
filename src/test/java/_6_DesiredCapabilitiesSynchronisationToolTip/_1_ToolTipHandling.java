@@ -1,4 +1,4 @@
-package _5_AltertPopUpFrameHandling;
+ package _6_DesiredCapabilitiesSynchronisationToolTip;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class _9_ToolTipHandling {
+public class _1_ToolTipHandling {
 
 	WebDriver driver;
 
@@ -39,7 +39,7 @@ public class _9_ToolTipHandling {
 		Thread.sleep(3000);
 
 		Actions act = new Actions(driver);
-		act.moveToElement(hoverButton).build().perform();;
+		act.moveToElement(hoverButton).build().perform();
 
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);

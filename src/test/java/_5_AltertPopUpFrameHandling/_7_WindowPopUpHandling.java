@@ -38,6 +38,7 @@ public class _7_WindowPopUpHandling {
 
 		String parentWindowId = it.next();
 		String childWindowId = it.next();
+		
 
 		driver.switchTo().window(childWindowId);
 
