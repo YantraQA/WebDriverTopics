@@ -17,13 +17,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import _7_ScreenShotCaptureNJavaScriptUtils._2_JavaScriptUtil.JavaScriptUtil;
 
 public class _1_ScreenshotCaptureDemo {
 	
 	WebDriver driver;
 	WebDriverWait wait;
-	String URL = "https://www.google.com";
+	String URL = "https://www.google.co.in";
 	
 	@Before
 	public void setup()
@@ -55,7 +54,7 @@ public class _1_ScreenshotCaptureDemo {
 		
 		javatpointLink.click();
 		
-		screenshotCapture(driver, "SearchResult");
+		screenshotCapture(driver, "SeleniumKeywordResult");
 	
 	}
 	
@@ -75,11 +74,11 @@ public class _1_ScreenshotCaptureDemo {
 		try {
 			
 			// 3. Transferring the screenshot by hard coded path (Must not be used) 
-			//FileUtils.copyFile(file, new File("C:\Users\Sarang\eclipse-workspace\WebDriverTopics\src\test\java\_7_ScreenShotCaptureNJavaScriptUtils\_1_ScreenshotCapture\screenshots\\" + fileNameToBe + ".jpg"));
+			//FileUtils.copyFile(file, new File("C:\\Users\\Sarang\\eclipse-workspace\\WebDriverTopics\\src\\test\\java\\_7_ScreenShotCaptureNJavaScriptUtils\\_1_ScreenshotCapture\\screenshots\\" + fileNameToBe + ".jpg"));
 			
 			// 3. Transferring the screenshot without hard coding (advisable to be used like this)
 			FileUtils.copyFile(file, new File( System.getProperty("user.dir") 
-					+ "/src/test/java/_7_ScreenShotCaptureNJavaScriptUtils/_1_ScreenshotCapture/screenshots/" + fileNameToBe + ".jpg"));
+					+ "/src/test/java/_7_ScreenShotCaptureNJavaScriptUtils/_1_ScreenshotCapture/screenshots/" + fileNameToBe + System.currentTimeMillis()+".jpg"));
 			
 		} catch (IOException e) {
 			

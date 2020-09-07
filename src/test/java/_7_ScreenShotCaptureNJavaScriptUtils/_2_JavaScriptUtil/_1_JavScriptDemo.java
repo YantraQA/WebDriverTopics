@@ -41,7 +41,7 @@ public class _1_JavScriptDemo {
 	}
 	
 	@Test
-	public void tc_01()
+	public void tc_01() throws InterruptedException
 	{
 		
 		//System.out.println(System.getProperty("user.dir"));
@@ -52,6 +52,7 @@ public class _1_JavScriptDemo {
 		
 		// flashing the element 
 		javaScriptUtil.flash(searchBox);
+		
 		searchBox.sendKeys("Selenium");
 		
 		WebElement searchButton = driver.findElement(By.name("btnK"));
@@ -65,8 +66,12 @@ public class _1_JavScriptDemo {
 		String pageTitle = javaScriptUtil.getTitleByJS();
 		System.out.println("Current Page Title is : " + pageTitle);
 		
+		Thread.sleep(3000);
+		
 		// Generating alert by javascript
 		javaScriptUtil.generateAlert("Current Page Title is : " + pageTitle);
+		
+		Thread.sleep(3000);
 		
 		// Handling alert
 		Alert alert = driver.switchTo().alert();
@@ -74,7 +79,7 @@ public class _1_JavScriptDemo {
 		
 		wait.until(ExpectedConditions.titleContains("Selenium"));
 		
-		WebElement javatpointLink = driver.findElement(By.xpath("//h3[contains(text(),'Selenium Tutorial - javatpoint')]"));
+		WebElement javatpointLink = driver.findElement(By.xpath("//h3[contains(text(),'Selenium Tutorial for Beginners: Learn WebDriver in 7 Days')]"));
 		
 		wait.until(ExpectedConditions.elementToBeClickable(javatpointLink));
 		

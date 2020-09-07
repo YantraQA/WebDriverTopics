@@ -44,7 +44,7 @@ public class JavaScriptUtil {
 	 * @param WebElements color
 	 * @param WebElement variable
 	 */
-	private void changeColor(String color, WebElement element) {
+	public void changeColor(String color, WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
 
