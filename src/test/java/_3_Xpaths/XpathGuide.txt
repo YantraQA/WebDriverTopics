@@ -1,8 +1,20 @@
 Notes - 
 
-1. Absolute Xpath starts always with "//" - means anywhere inside the document
+Absolute Xpath: It contains the complete path from the Root Element to the desire element.
+Why Not to use absolute xpath?
+-> 	1. Performance is slow
+	2. Not reliable & can be changed any time in future 
 
-2. Xpath With Contains
+Relative/Custom Xpath: This is more like starting simply by referencing the element you want and go from the particular location.
+
+Which one should be used ?
+-> You use always the Relative Path for testing of an element. 
+The reason behind that is if you make any architectural change in the website the change won't effect the testing 
+or selecting of the element.
+
+1. "//" - means anywhere inside the document
+
+2. Xpath With Contains - for dynamic attributes
 	When to use - First -> id = #hqf_test_123 after refresh -> id = #hqf_test_124
 	then xpath will be ->//input[contains(@id,'#hqf_test_')]
 	
@@ -16,12 +28,12 @@ Notes -
 	then xpath will be ->//input[text()='iphone')]
 	Note - it will find specifically the element having iphone text available
 	
-5. Xpath with "starts-With"  
+5. Xpath with "starts-With" - for dynamic attributes
 	When to use - First ->  id = test_123 after refresh -> id = test_124
 	then xpath will be -> //input[starts-with(@id,'test_')]
 	
 
-6. Xpath with "ends-With"  
+6. Xpath with "ends-With"  - for dynamic attributes
 	When to use - First ->  id = %456_test after refresh -> id = %457_test
 	then xpath will be -> //input[ends-with(@id,'_test')]
 
