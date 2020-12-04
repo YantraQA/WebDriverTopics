@@ -25,6 +25,7 @@ public class _3_HeadlessBrowser {
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("--incognito");
+		options.addArguments("--disable-infobars");
 		//options.addArguments("window-size=1920,1080");
 		//options.addArguments("window-size=800,600");
 		options.addArguments("--ignore-certificate-errors");
