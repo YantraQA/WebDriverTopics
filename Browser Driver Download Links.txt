@@ -1,0 +1,13 @@
+Links to download browser drivers for selenium
+
+1. Chrome
+https://chromedriver.chromium.org/downloads
+
+2. Edge
+https://chromedriver.chromium.org/downloads
+
+3. Opera
+https://github.com/operasoftware/operachromiumdriver/releases
+
+4. Firefox
+https://github.com/mozilla/geckodriver/releases

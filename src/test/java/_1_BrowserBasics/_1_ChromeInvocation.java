@@ -9,8 +9,8 @@ public class _1_ChromeInvocation {
 		
 		
 		// Set the path of browser driver
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sarang\\eclipse-workspace\\WebDriverTopics\\chromedriver.exe"); // if driver is in other location
-		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe"); // if driver file is in root folder of project
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sarang\\eclipse-workspace\\WebDriverTopics\\chromedriver.exe"); // if driver is in other location
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe"); // if driver file is in root folder of project
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
 		//No need to right this line if driver is in root folder
 		
@@ -22,7 +22,6 @@ public class _1_ChromeInvocation {
 				
 		// entering url to open
 		driver.get("https://demo.cs-cart.com/");
-		
 		
 		// fetching page title
 		String pageTitle = driver.getTitle();

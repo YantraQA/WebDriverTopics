@@ -19,6 +19,8 @@ public static void main(String[] args) {
 
 		// entering url to open
 		driver.get("https://www.google.co.in");
+		
+		System.out.println("The Current page title is -> " + driver.getTitle());
 
 		// closing the current opened browser window
 		driver.quit();
