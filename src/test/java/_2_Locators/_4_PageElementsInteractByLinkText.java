@@ -21,14 +21,18 @@ public class _4_PageElementsInteractByLinkText {
 		// Invoking the browser with given URL
 		driver.get("https://dzone.com/articles/find-elements-with-link-text-amp-partial-link-text");
 
+
 		// Finding the WebElement having the Link for text as "ID locator in Selenium"
-		WebElement firstLink = driver.findElement(By.linkText("ID locator in Selenium"));
-
+		WebElement IDlocatorInSeleniumLink = driver.findElement(By.linkText("ID locator in Selenium"));
+		
+		String textOfTheClickedLink = IDlocatorInSeleniumLink.getText();
+		System.out.println("Text for the link over the page is " + textOfTheClickedLink);
+		
 		// Clicking on the link
-		firstLink.click();
-
+		IDlocatorInSeleniumLink.click();
+		
 		// Waiting for next page to load 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		// Closing the browser
 		driver.quit();

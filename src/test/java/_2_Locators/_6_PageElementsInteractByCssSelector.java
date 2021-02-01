@@ -41,6 +41,28 @@ public class _6_PageElementsInteractByCssSelector {
 		
 		// Fetching the page title & printing it
 		System.out.println("The Page Title is after making search for a keyword is : " + driver.getTitle());
+		
+		// ------------------------------------------------ Either can use this code  ----------------------------------------------------------
+		
+//		// Entering text into the search box
+//		searchBox.sendKeys("Automation Testing" + Keys.ENTER);
+//
+//		// Waiting for the Google Search button to appear after entering the search keyword
+//		Thread.sleep(4000);
+//		
+//		// Finding the WebElement of Google Search button by css selector with name attribute having value "btnK"
+//		WebElement searchButton = driver.findElement(By.cssSelector("input[name=btnK]"));
+//		
+//		// Clicking on Google Search button
+//		searchButton.click();
+//		
+//		// Waiting for next page to load 
+//		Thread.sleep(5000);
+//		
+//		// Fetching the page title & printing it
+//		System.out.println("The Page Title is after making search for a keyword is : " + driver.getTitle());
+		
+		// ------------------------------------------------------------------------------------------------------------------------------------
 
 		// Closing the browser
 		driver.quit();
