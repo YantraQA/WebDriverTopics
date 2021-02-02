@@ -38,6 +38,25 @@ public class _3_PageElementsInteractByClassName {
 		
 		// Fetching the title of the updated page
 		System.out.println("The page title after clicking on Sign In Button is : " + driver.getTitle());
+		
+		// -------------------------------------------------------------------------------------------------
+		
+		// Sending text to Login Text Box
+		WebElement loginTextBox = driver.findElement(By.id("user_login"));
+		loginTextBox.sendKeys("username");
+		
+		// Sending text to password text box
+		WebElement passwordTextBox = driver.findElement(By.id("user_password"));
+		passwordTextBox.sendKeys("password");
+		
+		// Click operation on SignIn Button on login page
+		WebElement SignInButtonLogInPage = driver.findElement(By.name("submit"));
+		SignInButtonLogInPage.click();
+		
+		// Fetching the title of the updated page
+		System.out.println("The page title after clicking on Sign In Button is : " + driver.getTitle());
+		
+		// -------------------------------------------------------------------------------------------------
 
 		// Closing The browser
 		driver.quit();

@@ -28,7 +28,7 @@ public class _10_CloseVsQuit {
 		firstLink.click();
 
 		// Waiting for next page to load 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		// Closing the current browser instance where WebDriver is pointing
 		driver.close();

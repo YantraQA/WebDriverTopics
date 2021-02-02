@@ -33,7 +33,7 @@ public class _2_PageElementsInteractByName {
 		searchBox.sendKeys("Selenium");
 		
 		// Waiting for the Google Search button to appear after entering the search keyword
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		
 		// Finding the WebElement of Google Search button by name locator
 		WebElement searchButton = driver.findElement(By.name("btnK"));
@@ -48,7 +48,7 @@ public class _2_PageElementsInteractByName {
 		System.out.println("The Page Title is : " + driver.getTitle());
 
 		// Closing The browser
-		driver.quit();
+		//driver.quit();
 
 	}
 

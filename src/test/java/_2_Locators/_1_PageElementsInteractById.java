@@ -24,6 +24,8 @@ public class _1_PageElementsInteractById {
 		// Invoking the browser with given URL
 		driver.get("http://demo.automationtesting.in/Index.html");
 		
+		System.out.println("Landing page title " + driver.getTitle());
+		
 		// Finding the WebElement of SearchBox for username field
 		WebElement userNameField = driver.findElement(By.id("email"));
 		

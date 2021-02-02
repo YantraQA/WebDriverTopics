@@ -21,7 +21,7 @@ public class _9_EnteringDataAndValidating {
 
 		driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
 		
-		String textToBeEntered = "Selenium Web Automation Tool";
+		String textToBeEntered = "Selenium is a Web Automation Tool";
 
 		WebElement textField = driver.findElement(By.id("user-message"));
 		textField.sendKeys(textToBeEntered);
