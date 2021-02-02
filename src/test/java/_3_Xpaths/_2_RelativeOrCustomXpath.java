@@ -35,7 +35,7 @@ public class _2_RelativeOrCustomXpath {
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
 
-		WebElement searchButton = driver.findElement(By.xpath("//input[@type='submit' and @class='nav-input']"));
+		WebElement searchButton = driver.findElement(By.xpath("//input[@id='nav-search-submit-button' and @type='submit']"));
 		searchButton.click();
 		
 		// To Halt the execution for sometime (demonstration purposes)
@@ -48,7 +48,8 @@ public class _2_RelativeOrCustomXpath {
 		
 		// Option 1
 		String searchResultText = searchResult.getText();
-		Assert.assertEquals("\"iphone\"", searchResultText);
+		Assert.assertEquals("Correct Text is not comming","\"iphone\"", searchResultText);
+
 		
 		// Option 2
 //		Assert.assertEquals("\"iphone\"", searchResult.getText());

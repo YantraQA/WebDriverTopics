@@ -25,13 +25,13 @@ or selecting of the element.
 	
 4. Xpath with Text 
 	When to use - element having particular text
-	then xpath will be ->//input[text()='iphone')]
+	then xpath will be ->//input[text()='iphone']
 	Note - it will find specifically the element having iphone text available
 	
 5. Xpath with "starts-With" - for dynamic attributes
 	When to use - First ->  id = test_123 after refresh -> id = test_124
 	then xpath will be -> //input[starts-with(@id,'test_')]
-	
+	//input[@id='test_123']
 
 6. Xpath with "ends-With"  - for dynamic attributes
 	When to use - First ->  id = %456_test after refresh -> id = %457_test

@@ -41,7 +41,8 @@ public class _4_ListOfLinksFromWebpage {
 			{
 				
 			}
-			else {
+			else 
+			{
 				System.out.println((i+1) + ". " + linksOnPage.get(i).getText());
 			}
 		}

@@ -26,15 +26,15 @@ public class _1_AbsoluteXpath {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://www.amazon.in");
+		driver.get("https://www.amazon.in/");
 	}
 	
 	@Test
 	public void validateTitleTest()
 	{	
+		
 		Assert.assertEquals("Title is not matching", pageTitle, driver.getTitle());
 		System.out.println("Test Case is pass");
-	
 	}
 	
 	@Test
