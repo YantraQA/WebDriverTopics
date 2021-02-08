@@ -32,13 +32,15 @@ public class _1_DragAndDrop {
 		//WebElement element1 = driver.findElement(By.xpath("//div[@id='draggable']"));
 		WebElement dropArea = driver.findElement(By.id("droppable"));
 		//WebElement dropArea = driver.findElement(By.xpath("//div[@id='simpleDropContainer']//div[@id='droppable']"));
+		
 		Actions act = new Actions(driver);
 		
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
-		
-		act.clickAndHold(element1).moveToElement(dropArea).build().perform();
-		//act.dragAndDrop(element1, dropArea).build().perform();
+
+		//act.clickAndHold(element1).moveToElement(dropArea).build().perform();
+		act.dragAndDrop(element1, dropArea).build().perform();
+
 	}
 	
 	@After

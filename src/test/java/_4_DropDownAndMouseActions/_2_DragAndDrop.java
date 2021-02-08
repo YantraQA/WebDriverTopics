@@ -31,6 +31,8 @@ public class _2_DragAndDrop {
 		
 //		WebElement frameEle = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
 //		driver.switchTo().frame(frameEle);
+		
+		// Alternate way
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
 		
 		
@@ -44,7 +46,7 @@ public class _2_DragAndDrop {
 		Thread.sleep(3000);
 		
 		//act.clickAndHold(element1).moveToElement(dropArea).build().perform();
-		act.dragAndDrop(element1, dropArea).perform();
+		act.dragAndDrop(element1, dropArea).build().perform();
 	}
 
 	@After

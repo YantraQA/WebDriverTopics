@@ -36,6 +36,7 @@ public class _3_RightClick {
 		Actions act = new Actions(driver);
 	
 		act.contextClick(righClickMeButton).build().perform();
+		
 	}
 
 	@After

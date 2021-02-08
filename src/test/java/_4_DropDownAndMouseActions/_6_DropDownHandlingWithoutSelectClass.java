@@ -38,12 +38,16 @@ public class _6_DropDownHandlingWithoutSelectClass {
 		act.contextClick(righClickMeButton).build().perform();
 		
 		List <WebElement> rightClickMenuOptions = driver.findElements(By.xpath("//ul[@class='context-menu-list context-menu-root']//li/span"));
-		for (int i = 0; i < rightClickMenuOptions.size(); i++) {
+		
+		for (int i = 0; i < rightClickMenuOptions.size(); i++) 
+		{
 		
 			System.out.println("Option No " + (i+1) +" is "+ rightClickMenuOptions.get(i).getText());
-			if (rightClickMenuOptions.get(i).getText().equals("Copy")) {
-				
+			if (rightClickMenuOptions.get(i).getText().equals("Copy")) 
+			{
+				Thread.sleep(2000);
 				rightClickMenuOptions.get(i).click();
+				Thread.sleep(2000);
 			}
 			
 		}

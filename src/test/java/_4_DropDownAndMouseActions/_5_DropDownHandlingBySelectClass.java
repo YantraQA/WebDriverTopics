@@ -38,18 +38,23 @@ public class _5_DropDownHandlingBySelectClass {
 		
 		Select daySelect = new Select(birthDay);
 		daySelect.selectByVisibleText("3");
+		//daySelect.selectByValue("3");
 		
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(2000);
 		
 		Select monthSelect = new Select(birthMonth);
 		monthSelect.selectByVisibleText("Dec");
+		//monthSelect.selectByValue("12");
+
+
 		
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(2000);
 		
 		Select yearSelect = new Select(birthYear);
 		yearSelect.selectByVisibleText("2014");
+		//yearSelect.selectByValue("2014");
 		
 	}
 
