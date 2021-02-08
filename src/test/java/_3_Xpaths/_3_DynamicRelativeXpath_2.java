@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class _3_DynamicRelativeXpath_2 {
 	
 	WebDriver driver;
-	String TextToBeClicked = "Pepe Jeans Tshirts";
+	String TextToBeClicked = "Pepe Jeans Sweatshirt";
 
 	@Before
 	public void setup()
@@ -36,6 +36,28 @@ public class _3_DynamicRelativeXpath_2 {
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
 		
+		// Below used Xpath also called as Parameterized Xpath
+		//li[@class='desktop-suggestion null' and text()='Pepe Jeans Tshirts']
+		WebElement searchItem = driver.findElement(By.xpath("//ul[@class='desktop-group']//li[@class='desktop-suggestion null' and text()='"+TextToBeClicked+"']"));
+		
+		searchItem.click();
+		
+		// To Halt the execution for sometime (demonstration purposes)
+		Thread.sleep(3000);
+
+	}
+	
+	@Test
+	public void searchboxTest1() throws InterruptedException
+	{
+		WebElement searchBox = driver.findElement(By.xpath("//input[@class='desktop-searchBar']"));
+		searchBox.sendKeys("pepe");
+		
+		// To Halt the execution for sometime (demonstration purposes)
+		Thread.sleep(3000);
+		
+		// Below used Xpath also called as Parameterized Xpath
+		//li[@class='desktop-suggestion null' and text()='Pepe Jeans Tshirts']
 		WebElement searchItem = driver.findElement(By.xpath("//ul[@class='desktop-group']//li[@class='desktop-suggestion null' and text()='"+TextToBeClicked+"']"));
 		
 		searchItem.click();

@@ -28,23 +28,35 @@ public class _4_ListOfLinksFromWebpage {
 	
 		System.out.println("Total no of links count on the page is " + linksOnPage.size());
 		
-		// Printing the all link text
-//		for (int i = 0; i < linksOnPage.size(); i++) 
-//		{
-//			System.out.println((i+1) + ". " + linksOnPage.get(i).getText());
-//		}
 		
+		System.out.println("Printing the all link text");
+		// Printing the all link text
+		for (int i = 0; i < linksOnPage.size(); i++) 
+		{
+			System.out.println((i+1) + ". " + linksOnPage.get(i).getText());
+		}
+		
+		System.out.println("---------------------------------------------");
+		
+		System.out.println("Print the all link text without blank value");
 		// Print the all link text without blank value
 		for (int i = 0; i < linksOnPage.size(); i++) 
 		{
 			if (linksOnPage.get(i).getText().isEmpty()) 
 			{
-				
+				// do nothing
 			}
 			else 
 			{
 				System.out.println((i+1) + ". " + linksOnPage.get(i).getText());
 			}
+			
+			// Alternate way
+//			if (!(linksOnPage.get(i).getText().isEmpty())) 
+//			{
+//				System.out.println((i+1) + ". " + linksOnPage.get(i).getText());
+//			}
+			
 		}
 		
 		Thread.sleep(2000);
