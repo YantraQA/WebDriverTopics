@@ -30,9 +30,7 @@ public class _1_ToolTipHandling {
 	@Test
 	public void dropDown() throws InterruptedException
 	{
-		
-		//driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
-		
+			
 		WebElement hoverButton = driver.findElement(By.id("toolTipButton"));
 
 		// To Halt the execution for sometime (demonstration purposes)
@@ -58,7 +56,7 @@ public class _1_ToolTipHandling {
 	{
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
-		driver.quit();
+		//driver.quit();
 	}
 
 }
