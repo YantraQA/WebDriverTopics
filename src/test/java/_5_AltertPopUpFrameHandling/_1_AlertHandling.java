@@ -42,6 +42,8 @@ public class _1_AlertHandling {
 		// Fetching the alert text
 		System.out.println("Text of alert is : " + alert.getText());
 		
+		Assert.assertEquals("Alert text is not matching","I am an alert box!", alert.getText());
+		
 		alert.accept();
 	}
 

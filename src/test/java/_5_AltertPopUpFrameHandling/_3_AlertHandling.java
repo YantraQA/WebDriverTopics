@@ -37,9 +37,12 @@ public class _3_AlertHandling {
 
 		Alert alert = driver.switchTo().alert();
 		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		alert.sendKeys("Tom Peter");
+		
+		Thread.sleep(3000);
+		
 		alert.accept();
 		
 		WebElement alertConfirmationMsg = driver.findElement(By.xpath("//p[@id='demo1']"));

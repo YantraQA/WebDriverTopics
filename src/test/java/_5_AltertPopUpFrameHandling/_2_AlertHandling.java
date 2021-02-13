@@ -39,12 +39,14 @@ public class _2_AlertHandling {
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(2000);
 		
-		alert.accept();
-		//alert.dismiss();
+		System.out.println("Alert bot text is ->" + alert.getText());
+		
+		//alert.accept();
+		alert.dismiss();
 
 		// Asserting the alert accepted message
-		WebElement alertConfirmMessage = driver.findElement(By.xpath("//p[contains(text(),'You pressed Ok')]"));
-		Assert.assertEquals("You pressed Ok", alertConfirmMessage.getText());
+		WebElement alertConfirmMessage = driver.findElement(By.xpath("//p[@id='demo']"));
+		Assert.assertEquals("You Pressed Cancel", alertConfirmMessage.getText());
 
 
 	}

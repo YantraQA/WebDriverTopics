@@ -31,7 +31,8 @@ public class _5_FrameHandling {
 		multiFrameButton.click();
 		
 		// Switching to frame 1
-		driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='Multiple']//iframe")));
+		WebElement frame1 = driver.findElement(By.xpath("//div[@id='Multiple']//iframe"));
+		driver.switchTo().frame(frame1);
 		
 		// switching to frame inside frame 1
 		driver.switchTo().frame(driver.findElement(By.xpath("//div[@class='row']/iframe")));
