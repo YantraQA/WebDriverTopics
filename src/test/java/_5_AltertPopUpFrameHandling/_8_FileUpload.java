@@ -28,8 +28,10 @@ public class _8_FileUpload {
 	@Test
 	public void dropDown() throws InterruptedException 
 	{
+		// Note - Type=file or Name=Upfile should be available for this in the DOM
+		
 		WebElement chooseFileButton = driver.findElement(By.xpath("//input[@type='file']"));
-		chooseFileButton.sendKeys("F:\\New folder (3)\\demo.txt");
+		chooseFileButton.sendKeys("C:\\testDemoFile.txt");
 
 		// To Halt the execution for sometime (demonstration purposes)
 		Thread.sleep(3000);
