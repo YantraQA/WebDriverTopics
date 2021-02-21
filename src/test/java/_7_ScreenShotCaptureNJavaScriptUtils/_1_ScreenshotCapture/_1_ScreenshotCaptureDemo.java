@@ -2,6 +2,8 @@ package _7_ScreenShotCaptureNJavaScriptUtils._1_ScreenshotCapture;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.NumberFormat;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -39,7 +41,7 @@ public class _1_ScreenshotCaptureDemo {
 	public void tc_01()
 	{
 		
-		//System.out.println(System.getProperty("user.dir"));
+		
 		WebElement searchBox = driver.findElement(By.name("q"));
 		searchBox.sendKeys("Selenium");
 		
@@ -48,13 +50,25 @@ public class _1_ScreenshotCaptureDemo {
 		
 		wait.until(ExpectedConditions.titleContains("Selenium"));
 		
-		WebElement javatpointLink = driver.findElement(By.xpath("//h3[contains(text(),'Selenium Tutorial - javatpoint')]"));
-		
-		wait.until(ExpectedConditions.elementToBeClickable(javatpointLink));
-		
-		javatpointLink.click();
 		
 		screenshotCapture(driver, "SeleniumKeywordResult");
+	
+	}
+	
+	@Test
+	public void tc_02()
+	{
+		
+		WebElement searchBox = driver.findElement(By.name("q"));
+		searchBox.sendKeys("Appium Tool");
+		
+		WebElement searchButton = driver.findElement(By.name("btnK"));
+		searchButton.click();
+		
+		wait.until(ExpectedConditions.titleContains("Appium Tool"));
+		
+		
+		screenshotCapture(driver, "Appium Tool");
 	
 	}
 	
