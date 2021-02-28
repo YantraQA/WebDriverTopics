@@ -16,6 +16,7 @@ import org.openqa.selenium.opera.OperaDriver;
 
 public class Utils {
 	
+	
 	// Class variables
 	public WebDriver driver;
 	public Properties prop;

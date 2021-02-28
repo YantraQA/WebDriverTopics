@@ -152,7 +152,7 @@ public class JavaScriptUtil {
 		js.executeScript("document.getElementByName('" + name + "').value='" + value + "'");
 	}
 	
-	public void selectValueByCSSJavaScript(String elementCSSValue, String valueTobeEntered) {
+	public void sendKeysValueByCSSJavaScript(String elementCSSValue, String valueTobeEntered) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("document.querySelector('"+elementCSSValue+"').value='"+valueTobeEntered+"'");
 	}
