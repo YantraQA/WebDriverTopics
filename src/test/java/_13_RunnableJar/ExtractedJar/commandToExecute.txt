@@ -1,0 +1,3 @@
+java -jar <javafileName>.jar <Username To Send Message> <Message Body Without Space Underscore Seperated>
+
+java -jar whatsAppRunnableJar.jar Subscriber hi_there_whatsup!!
