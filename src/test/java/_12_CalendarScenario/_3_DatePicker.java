@@ -19,9 +19,9 @@ public class _3_DatePicker
 	public static WebDriverWait wait;
 	public String url = "http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html";
 
-	public static String requiredDateNumber = "31";
+	public static String requiredDateNumber = "15";
 	public static String requiredMonth = "March";
-	public static String requiredYearNumber = "2019";
+	public static String requiredYearNumber = "2017";
 
 	@Before
 	public void setup()

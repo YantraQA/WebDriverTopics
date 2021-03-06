@@ -36,13 +36,13 @@ public class _1_DatePicker {
 		Thread.sleep(3000);
 	}
 	
-	@Test
-	public void _2_pickADateByUsingJavaScript() throws InterruptedException
-	{
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("document.getElementById('datepicker1').value='02/28/2022'");
-		Thread.sleep(3000);
-	}
+//	@Test
+//	public void _2_pickADateByUsingJavaScript() throws InterruptedException
+//	{
+//		JavascriptExecutor js = ((JavascriptExecutor) driver);
+//		js.executeScript("document.getElementById('datepicker1').value='05/15/2022'");
+//		Thread.sleep(3000);
+//	}
 
 	public static void selectValueByIDJavaScript(WebDriver driver, String elementId, String valueTobeEntered) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);

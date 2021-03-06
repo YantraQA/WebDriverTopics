@@ -18,10 +18,10 @@ public class RunnableJarFileConcept {
 			
 	public static void main(String[] args) throws InterruptedException {
 
-		UsersName = args[0];
-		messageBodyToBeSent = args[1];
-//		UsersName = "Unknown";
-//		messageBodyToBeSent = "hi_there_hi";
+//		UsersName = args[0];
+//		messageBodyToBeSent = args[1];
+		UsersName = "Unknown";
+		messageBodyToBeSent = "hi_there_hi";
 		
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();

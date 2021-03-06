@@ -18,7 +18,7 @@ public class _2_DatePicker {
 	static WebDriver driver;
 
 	String url = "http://demo.automationtesting.in/Datepicker.html";
-	String monthToBeSelected = "March";
+	String monthToBeSelected = "April";
 	String yearToBeSelected = "2022";
 	String dateToBeSelected = "28";
 
@@ -36,7 +36,7 @@ public class _2_DatePicker {
 	@Test
 	public void _1_pickADateByUsingJavaScript() throws InterruptedException
 	{
-		Thread.sleep(5000); 
+		Thread.sleep(5000);
 
 		WebElement datePickerElement = driver.findElement(By.id("datepicker2"));
 		datePickerElement.click();
