@@ -87,7 +87,7 @@ public class ElementActions {
 		element = driver.findElements(locator);
 		return element;
 	}
-
+	
 	/**
 	 * This method perform .click operation
 	 * on the WebElement

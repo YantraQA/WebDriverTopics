@@ -19,5 +19,7 @@ public class LandingPage_Variables {
 		
 		return expectedCategoryList;
 	}
+	
+	public static final String newsLetterSubscriptionSuccessAlertText = "Newsletter : You have successfully subscribed to this newsletter.";
 
 }
