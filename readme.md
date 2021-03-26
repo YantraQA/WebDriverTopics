@@ -5,7 +5,7 @@ This repository contains the individual topics of Selenium WebDriver from basic 
 
 ---
 
-###Author:
+### Author:
 * Created By: Sarang Holey & Mr. Akash Tyagi
 * Reach out us at: sarangholey@gmail.com and akashdktyagi@gmail.com
 
