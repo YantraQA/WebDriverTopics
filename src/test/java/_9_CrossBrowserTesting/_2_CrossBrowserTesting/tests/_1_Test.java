@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.logging.log4j.core.config.Order;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
