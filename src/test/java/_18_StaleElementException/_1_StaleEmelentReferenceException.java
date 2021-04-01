@@ -1,4 +1,4 @@
-package _17_StaleElementException;
+ package _18_StaleElementException;
 
 import java.awt.AWTException;
 import java.util.concurrent.TimeUnit;
