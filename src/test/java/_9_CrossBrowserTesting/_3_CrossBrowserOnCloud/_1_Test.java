@@ -20,8 +20,8 @@ public class _1_Test {
 	//	public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
 	//	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 	
-	public static final String USERNAME = "tompeter_6699";
-	public static final String ACCESS_KEY = "ebe9983b-071a-4679-bcda-7f30bcb1e6f2";
+	public static final String USERNAME = "tompeter_669966";
+	public static final String ACCESS_KEY = "ae1fe3d6-b3cd-4207-bc74-e9610abe6ca8";
 	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 	
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
