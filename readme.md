@@ -88,10 +88,10 @@ This repository contains the individual topics of Selenium WebDriver from basic 
 
 ### Some other Resources
 
-* HTTP: [Click Here](HttpRequest.jpg)
-* HTTP Codes: [Click Here](http-status-code.png)
-* Selenium Web Driver PPT: [Click Here](Selenium%20Webdriver.pptx)
-* XPathGuide: [Click Here](XpathGuide.txt)
+* HTTP: [Click Here](files/HttpRequest.jpg)
+* HTTP Codes: [Click Here](files/http-status-code.png)
+* Selenium Web Driver PPT: [Click Here](files/Selenium%20Webdriver.pptx)
+* XPathGuide: [Click Here](files/XpathGuide.txt)
 
 ### XPATH GuideLines:
 
