@@ -27,3 +27,8 @@ hs_err_pid*
 .project
 .classpath
 *.exe
+
+WebDriverTopics.iml
+*.DS_Store
+.idea
+chromedriver

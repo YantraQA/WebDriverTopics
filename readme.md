@@ -83,3 +83,61 @@ This repository contains the individual topics of Selenium WebDriver from basic 
 ### Note - For making operations on any required browser
 	i. It should be installed on your system.
 	ii. The compatible browser driver version should be downloaded depending on the current browser vendors version.
+
+---
+
+### Some other Resources
+
+* HTTP: [Click Here](HttpRequest.jpg)
+* HTTP Codes: [Click Here](http-status-code.png)
+* Selenium Web Driver PPT: [Click Here](Selenium%20Webdriver.pptx)
+* XPathGuide: [Click Here](XpathGuide.txt)
+
+### XPATH GuideLines:
+
+```text
+Notes - 
+
+Absolute Xpath: It contains the complete path from the Root Element to the desire element.
+Why Not to use absolute xpath?
+-> 	1. Performance is slow
+	2. Not reliable & can be changed any time in future 
+
+Relative/Custom Xpath: This is more like starting simply by referencing the element you want and go from the particular location.
+
+Which one should be used ?
+-> You use always the Relative Path for testing of an element. 
+The reason behind that is if you make any architectural change in the website the change won't effect the testing 
+or selecting of the element.
+
+1. "//" - means anywhere inside the document
+
+2. Xpath With Contains - for dynamic attributes
+	When to use - First -> id = #hqf_test_123 after refresh -> id = #hqf_test_124
+	then xpath will be ->//input[contains(@id,'#hqf_test_')]
+	
+3. Xpath with Contains Text function
+	When to use - there is no id, name, classname attribute available & element having particular text
+	then xpath will be ->//input[contains(text(),'iphone')]
+	Note - it will also find the elements having some other text with word iphone in it
+	
+4. Xpath with Text 
+	When to use - element having particular text
+	then xpath will be ->//input[text()='iphone']
+	Note - it will find specifically the element having iphone text available
+	
+5. Xpath with "starts-With" - for dynamic attributes
+	When to use - First ->  id = test_123 after refresh -> id = test_124
+	then xpath will be -> //input[starts-with(@id,'test_')]
+	//input[@id='test_123']
+
+6. Xpath with "ends-With"  - for dynamic attributes
+	When to use - First ->  id = %456_test after refresh -> id = %457_test
+	then xpath will be -> //input[ends-with(@id,'_test')]
+
+7. Xpath with index
+	When to use - there are more than one elements pointing to a xpath having already unique properties
+	URL - https://getbootstrap.com/docs/4.0/components/buttons/
+	then xpath will be -> (//div[@class='bd-example']/button[@type='button' and text()='Primary'])[2]
+	
+```
