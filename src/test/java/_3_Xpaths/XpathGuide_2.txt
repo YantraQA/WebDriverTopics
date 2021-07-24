@@ -1,0 +1,31 @@
+Full Xpath - Absolute Xpath
+/html/body/div[1]/form/div[1]/button
+/html/body/div[2]/div[3]/form/div[1]/div[1]/div[3]/span/center/input[1]
+
+Customize Xpath - Realtive xpath
+//input[@name='q']
+
+Some methods in Relative xpath
+1. Contains - //div[@id='wrccontainer_201']  OR //div[@name='wrccontainer_201'] OR //div[@name='789_wrccontainer']
+//div[contains(@id,'wrccontainer_')]
+//div[contains(text(),'wrccontainer')]
+
+2. Text - //tagName[text()='necessaryTextOfElement']
+//div[text()='Google offered in:  ']
+
+3. Starts With - //div[@id='wrccontainer_789']
+//div[starts-with(@id,'wrccontainer_')]
+
+3. Ends With - //div[@id='789_wrccontainer']
+//div[ends-with(@id,'wrccontainer_')]
+
+4. And - //div[@id='hsdgchj' and @value='xhchxghj']
+
+5. Or - //div[@id='hsdgchj' or @value='xhchxghj']
+
+6. And & text() - //button[@id='hsdgchj' and text()='Hello']
+
+7. or & text() - //button[@id='hsdgchj' or text()='Hello']
+
+//span[contains(text(),'Lang')] - Relative or containing text option
+//span[text()='Languages:'] - Specific text Option
