@@ -1,6 +1,7 @@
 package _6_DesiredCapabilitiesSynchronisationToolTip;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -25,14 +26,17 @@ public class _3_HeadlessBrowser {
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("--incognito");
-		options.addArguments("--disable-infobars");
+		//options.addArguments("--disable-infobars");
+		options.setExperimentalOption("excludeSwitches", Arrays.asList(" disable-popup-blocking","enable-automation"));
+		options.setExperimentalOption ("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		//options.addArguments("window-size=1920,1080");
 		//options.addArguments("window-size=800,600");
-		options.addArguments("--ignore-certificate-errors");
+		//options.addArguments("--ignore-certificate-errors");
 		//options.addArguments("--disable-extension");
 		options.addArguments("start-maximized");
-		//options.addExtensions(new File("extension_3_9_4_0.crx"));
+		options.addExtensions(new File("extension_3_9_4_0.crx"));
 		driver = new ChromeDriver(options);
+		//driver = new ChromeDriver();
 		//driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -49,8 +53,8 @@ public class _3_HeadlessBrowser {
 		
 		System.out.println("After search the new Page Title is : " + driver.getTitle());
 		
-		WebElement firstLink = driver.findElement(By.xpath("//h3[contains(text(),'AUTOMATION TESTING Tutorial: What is, Process')]"));
-		firstLink.click();
+//		WebElement firstLink = driver.findElement(By.xpath("//h3[contains(text(),'Automation Testing Tutorial: What is Automated Testing?')]"));
+//		firstLink.click();
 		
 		
 	}
