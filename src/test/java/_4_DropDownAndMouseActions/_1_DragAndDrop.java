@@ -40,6 +40,10 @@ public class _1_DragAndDrop {
 
 		//act.clickAndHold(element1).moveToElement(dropArea).build().perform();
 		act.dragAndDrop(element1, dropArea).build().perform();
+		
+		WebElement droppedTextElement = driver.findElement(By.xpath("//div[@id='droppable']/p[text()='Dropped!']"));
+	
+		Assert.assertEquals("The action is not performed", "Dropped!!", droppedTextElement.getText());
 
 	}
 	
