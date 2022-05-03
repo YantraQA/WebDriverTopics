@@ -16,9 +16,7 @@ public class _3_WebTableHandingFetchingValues {
 	
 	// For Test : _3_WebTableHandingExample1
 	String dessertName = "Ice cream";
-	
-	// For Test : _3_WebTableHandingExample2
-	String loanPaidToDatePercentage = "9.27%";
+
 	
 	static WebDriver driver;
 	
@@ -53,17 +51,6 @@ public class _3_WebTableHandingFetchingValues {
 	}
 	
 	
-	@Test
-	public void _3_WebTableHandingExample2()
-	{
-		driver.get("https://emicalculator.net/");
-		
-		WebElement loanPaidDueDateYear = driver.findElement(By.xpath("(//td[text()='"+loanPaidToDatePercentage+"']/parent::tr/td[text()])[1]"));
-		
-		System.out.println("Loan paid due date percentage " + loanPaidToDatePercentage+ " is available for year is : " + loanPaidDueDateYear.getText());
-		
-		
-	}
 
 	@After
 	public void tearDown() throws InterruptedException
