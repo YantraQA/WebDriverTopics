@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class _1_StaleEmelentReferenceException {
 	
 	static WebDriver driver;
-	String url = "http://automationpractice.com/index.php";
+	String url = "https://demo.automationtesting.in/";
 	
 	@Before
 	public void setup() throws AWTException
