@@ -21,7 +21,7 @@ public class _1_ChromeInvocation {
 		driver.manage().deleteAllCookies(); // delete all cookies
 				
 		// entering url to open
-		driver.get("https://demo.cs-cart.com/");
+		driver.get("https://www.google.co.in");
 		
 		// fetching page title
 		String pageTitle = driver.getTitle();
@@ -35,7 +35,7 @@ public class _1_ChromeInvocation {
 
 		
 		// Validation
-		if(pageTitle.equals("Shopping Cart Software & Ecommerce Software Solutions by CS-Cart"))
+		if(pageTitle.equals("Google"))
 		{
 			System.out.println("Page title is correct");
 		}
