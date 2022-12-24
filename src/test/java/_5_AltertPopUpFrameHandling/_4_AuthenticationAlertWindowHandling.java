@@ -34,6 +34,17 @@ public class _4_AuthenticationAlertWindowHandling {
 		driver.get(URL);
 		
 		Assert.assertEquals(true, driver.findElement(By.xpath("//p[contains(text(),'Congratulations!')]")).getText().contains("Congratulations!"));
+		
+		//or
+		
+                // WebElement authSuccessEle = driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]"));
+		
+ 		//System.out.println("After auth success the text is -> " + authSuccessEle.getText());
+		
+		//Assert.assertEquals("Congratulations! You must have the proper credentials.", authSuccessEle.getText());
+		
+		//Assert.assertEquals(true, authSuccessEle.isDisplayed());
+		//Assert.assertEquals(true, authSuccessEle.getText().contains("Congratulations!"));
 
 	}
 
