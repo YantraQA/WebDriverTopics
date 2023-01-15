@@ -30,7 +30,9 @@ public class _2_DesiredCapabilities {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://cacert.com");
+		//driver.get("https://cacert.com");
+		driver.get("https://self-signed.badssl.com/");
+		
 	}
 
 	@Test
