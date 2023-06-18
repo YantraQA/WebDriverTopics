@@ -45,6 +45,7 @@ public class _3_DynamicAbsoluteXpath_1 {
 			if(searchList.get(i).getText().equals(TextToBeClicked))
 			{
 				searchList.get(i).click();
+				break;
 			}
 		}
 		
