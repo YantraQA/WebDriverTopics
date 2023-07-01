@@ -30,7 +30,7 @@ public class _4_AuthenticationAlertWindowHandling {
 
 		String username = "admin";
 		String password = "admin";
-		String URL = "http://" + username + ":" + password + "@" + "the-internet.herokuapp.com/digest_auth";
+		String URL = "http://" + username + ":" + password + "@" + "the-internet.herokuapp.com/basic_auth";
 		driver.get(URL);
 		
 		Assert.assertEquals(true, driver.findElement(By.xpath("//p[contains(text(),'Congratulations!')]")).getText().contains("Congratulations!"));
