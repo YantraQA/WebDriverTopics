@@ -21,7 +21,7 @@ public class BrokenLinksHandling {
 	String Url = "https://www.myntra.com/";
 	
 	@Before
-	public void setup() throws AWTException
+	public void setup()
 	{
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
@@ -36,9 +36,9 @@ public class BrokenLinksHandling {
 	// Images are refered img tag
 	// img src=http://www/test.com/img_1_logo.png
 	@Test
-	public void _1_TestForBrokenImages()
+	public void _1_TestForBrokenLinks()
 	{
-		List<WebElement> linkListWithImgTag = driver.findElements(By.tagName("a"));
+		List<WebElement> linkListWithAnchorTag = driver.findElements(By.tagName("a"));
 		System.out.println("Total a tag found with in URL -> " + Url + " is " + linkListWithImgTag.size());
 
 		for (int i = 0; i < linkListWithImgTag.size(); i++) 
