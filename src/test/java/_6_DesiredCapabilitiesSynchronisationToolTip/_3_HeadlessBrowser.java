@@ -26,15 +26,13 @@ public class _3_HeadlessBrowser {
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("headless");
 		//options.addArguments("--incognito");
-		//options.addArguments("--disable-infobars");
-		options.setExperimentalOption("excludeSwitches", Arrays.asList(" disable-popup-blocking","enable-automation"));
-		options.setExperimentalOption ("excludeSwitches", Arrays.asList("disable-popup-blocking"));
+		//options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 		//options.addArguments("window-size=1920,1080");
 		//options.addArguments("window-size=800,600");
 		//options.addArguments("--ignore-certificate-errors");
 		//options.addArguments("--disable-extension");
 		options.addArguments("start-maximized");
-		options.addExtensions(new File("extension_3_9_4_0.crx"));
+		//options.addExtensions(new File("extension_5_8_0_0.crx"));
 		driver = new ChromeDriver(options);
 		//driver = new ChromeDriver();
 		//driver.manage().window().maximize();
@@ -51,11 +49,7 @@ public class _3_HeadlessBrowser {
 		WebElement searchButton = driver.findElement(By.name("btnK"));
 		searchButton.sendKeys(Keys.ENTER);
 		
-		System.out.println("After search the new Page Title is : " + driver.getTitle());
-		
-//		WebElement firstLink = driver.findElement(By.xpath("//h3[contains(text(),'Automation Testing Tutorial: What is Automated Testing?')]"));
-//		firstLink.click();
-		
+		System.out.println("After search the new Page Title is : " + driver.getTitle());		
 		
 	}
 
@@ -63,8 +57,8 @@ public class _3_HeadlessBrowser {
 	public void teardown() throws InterruptedException
 	{
 		// To Halt the execution for sometime (demonstration purposes)
-		Thread.sleep(3000);
-		//driver.quit();
+		Thread.sleep(5000);
+		driver.quit();
 	}
 
 }
