@@ -17,8 +17,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrokenLinksHandling {
 	
-	static WebDriver driver;
-	String Url = "https://www.myntra.com/";
+static WebDriver driver;
+	String Url = "https://www.amazon.in/";
 	
 	@Before
 	public void setup()
@@ -39,16 +39,16 @@ public class BrokenLinksHandling {
 	public void _1_TestForBrokenLinks()
 	{
 		List<WebElement> linkListWithAnchorTag = driver.findElements(By.tagName("a"));
-		System.out.println("Total a tag found with in URL -> " + Url + " is " + linkListWithImgTag.size());
+		System.out.println("Total a tag found with in URL -> " + Url + " is " + linkListWithAnchorTag.size());
 
-		for (int i = 0; i < linkListWithImgTag.size(); i++) 
+		for (int i = 0; i < linkListWithAnchorTag.size(); i++) 
 		{
-			String imageSourceLink = linkListWithImgTag.get(i).getAttribute("href");
+			String hyperSourceLink = linkListWithAnchorTag.get(i).getAttribute("href");
 
 			try 
 			{
 				// Creating a URL
-				URL url = new URL(imageSourceLink);
+				URL url = new URL(hyperSourceLink);
 				// Creating a connection with URL
 				URLConnection urlConnection = url.openConnection();
 				// Setting up the connection protocol as HTTP or HTTPS
@@ -60,17 +60,17 @@ public class BrokenLinksHandling {
 				httpURLConnection.connect();
 				// Validating the response from the URL in the form of HTTP response code
 				if (httpURLConnection.getResponseCode() == 200) {
-					System.out.println("The Image Source Link " + imageSourceLink + " -> is " + httpURLConnection.getResponseCode());
+					System.out.println("The Image Source Link " + hyperSourceLink + " -> is " + httpURLConnection.getResponseCode());
 				}
 				else {
-					System.err.println("The Image Source Link " + imageSourceLink + " -> is " + httpURLConnection.getResponseCode());
+					System.err.println("The Image Source Link " + hyperSourceLink + " -> is " + httpURLConnection.getResponseCode());
 				}
 				// disconnecting the connection with URL
 				httpURLConnection.disconnect();
 			} 
 			catch (Exception e) 
 			{
-				System.out.println("Some issue with source link ->" + imageSourceLink);
+				System.out.println("Some issue with source link ->" + hyperSourceLink);
 				e.printStackTrace();
 			}				
 		}
@@ -80,6 +80,7 @@ public class BrokenLinksHandling {
 	@After
 	public void tearDown()
 	{
+		System.out.println("------------------- End of Process -------------------");
 		driver.quit();
 	}
 
