@@ -18,7 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BrokenLinksHandling {
 	
 	static WebDriver driver;
-	String Url = "http://automationpractice.com/index.php";
+	String Url = "https://www.myntra.com/";
 	
 	@Before
 	public void setup() throws AWTException
