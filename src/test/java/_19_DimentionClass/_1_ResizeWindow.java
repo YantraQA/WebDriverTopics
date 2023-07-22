@@ -13,7 +13,7 @@ public class _1_ResizeWindow {
 	
 	static WebDriver driver;
 
-	String url = "http://automationpractice.com";
+	String url = "https://www.amazon.in/";
 
 	@Before
 	public void setup()
